@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="titulo">Bem-vindo ao sistema</h1>
+        <nav>
+            <div class="redes-sociais">
+                <a href="https://www.instagram.com/leandro.kise" target="_blank">Instagram</a>
+                <a href="https://facebook.com/leandrokise" target="_blank">Facebook</a>
+                <a href="https://linkedin.com/in/leandrokise" target="_blank">Linkedin</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Bem-vindo Jogador!!</h1>
+        <p>Primeiramente você precisa me fornecer alguns dados para que possamos avaliar seu rank atual!</p>
+        <fieldset>
+            <legend>Cadastro</legend>
+            <form action="cadastro.php" autocomplete="on" method="post">
+
+                <div class="form">
+                    <label class="my-label" for="idnome">Nome</label>: <input type="text" name="nome" id="idnome"
+                        autocomplete="name" placeholder="Seu nome completo!" required>
+                </div>
+                <div class="form">
+                    <label for="iduser">Username</label>: <input type="text" name="user" id="iduser"
+                        autocomplete="nickname" placeholder="Como você será encontrado, ex: @leandro.kise."
+                        minlength="4" maxlength="20" required>
+                </div>
+                <div class="form">
+                    <label for="idemail">Email</label>: <input type="email" name="email" id="idemail"
+                        autocomplete="email" placeholder="Seu melhor email." required>
+                </div>
+                <div class="form">
+                    <label for="password">Senha</label>
+                    <input type="password" name="pass" id="password" placeholder="Digite uma senha forte!!" required
+                        minlength="8" maxlength="20">
+                </div>
+                <div class="form">
+                    <label for="iprof">Profissão</label>
+                    <input type="text" name="prof" id="iprof" placeholder="Qual profissão você atua?" list="profissao">
+                    <datalist id="profissao">
+                        <option value="Administrador"></option>
+                        <option value="Programador"></option>
+                        <option value="Medico">Médico</option>
+                    </datalist>
+                </div>
+                <div class="form">
+                    <label for="iestado">Estado</label>
+                    <select name="estado" id="iestado" required>
+                        <option value="" selected>Escolha um estado</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+                <div class="caixinhas">
+                    <input type="checkbox" name="term" id="iterm" required> <label for="iterm">Aceito os <a
+                            href="https://policies.google.com/terms?hl=pt-BR" target="_blank">termos de uso</a></label>
+                </div>
+                <div class="caixinhas">
+                    <input type="checkbox" name="email" id="iemail"> <label for="iemail">Gostaria de receber
+                        emails</label>
+                </div>
+                <div class="boton">
+                    <input class="botao" type="submit" value="Enviar">
+                </div>
+
+            </form>
+        </fieldset>
+    </main>
+
+</body>
+
+</html>
